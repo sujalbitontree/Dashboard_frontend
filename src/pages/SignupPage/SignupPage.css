@@ -1,0 +1,152 @@
+body{
+  overflow-x: hidden;
+}
+.signup-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f4f7fe;
+  overflow-y: auto;
+}
+
+.signup-page .container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2.5rem;
+  margin: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 550px; 
+  min-width: 300px; 
+  flex-shrink: 0;
+  height: auto;
+}
+
+.signup-page .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.signup-page .head h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.signup-page .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; 
+}
+
+.signup-page .field {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.signup-page .field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.signup-page input:not([type="radio"]) {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.signup-page .radio-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+
+.signup-page .radio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.signup-page .radio div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signup-page button {
+  background-color: #4681f4;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  
+}
+
+.signup-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-page .errors {
+  color: #ef4444;
+  font-size: 0.8rem;
+  min-height: 18px;
+}
+
+.signup-page .footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+.signin-page-link{
+   color: #4681f4;
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .signup-page .container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-page .container {
+    padding: 1.5rem;
+    margin: 20px 10px;
+    width: 95%;
+    max-width: none;
+  }
+  
+  .signup-page .head h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .signup-page .container {
+    padding: 1rem;
+    min-width: 280px;
+  }
+}
