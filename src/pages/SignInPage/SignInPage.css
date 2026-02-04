@@ -1,0 +1,153 @@
+.signin-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f4f7fe;
+  overflow-y: auto;
+}
+
+.signin-page .container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2.5rem;
+  margin: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 550px;
+  min-width: 300px; 
+  flex-shrink: 0;
+  height: auto;
+}
+
+.signin-page .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.signin-page .head h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.signin-page .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; 
+}
+
+.signin-page .field {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.signin-page .field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.signin-page input {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.signin-page .btn {
+ 
+  width: 100%;
+}
+
+.signin-page button {
+  background-color: #4681f4;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signin-page .disabled-btn {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signin-page .normal-btn:hover {
+  box-shadow: 0 0 5px 0 rgb(64, 64, 110);
+  
+}
+
+.signin-page .errors {
+  color: #ef4444;
+  font-size: 0.8rem;
+  min-height: 18px;
+}
+
+.signin-page .footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.signin-page .footer a {
+  color: #4681f4;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+ .forgot-password-link,.signup-page-link{
+  color: #4681f4;
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .signin-page .container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+  .links{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-page .container {
+    padding: 1.5rem;
+    margin: 20px 10px;
+    width: 95%;
+    max-width: none;
+  }
+  
+  .signin-page .head h2 {
+    font-size: 1.3rem;
+  }
+
+  .signin-page .disabled-btn{
+    width: 95%;
+  }
+} 

@@ -1,0 +1,115 @@
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.field input[type="text"],
+.field input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.errors {
+  color: #d9534f;
+  font-size: 12px;
+  margin-top: 5px;
+  height: 15px;
+}
+
+.radio-btn {
+  margin-bottom: 25px;
+}
+
+.radio-btn span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 14px;
+}
+
+.radio {
+  display: flex;
+  gap: 20px;
+}
+
+.radio div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+form .btn {
+  display: flex;
+  gap: 1rem;
+ 
+}
+
+
+
+ .normal-btn, .disable-btn {
+  flex-grow: 1; 
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  height: 48px; 
+}
+
+  .normal-btn {
+  background-color: #4a90e2;
+  color: white;
+  margin-top: 9px;
+}
+
+.disable-btn {
+  background-color: #4a90e2; 
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.6;
+  margin-top: 9px
+}
+.btn .back-btn{
+  background-color: #d9534f;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
