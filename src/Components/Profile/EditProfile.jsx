@@ -44,28 +44,26 @@ const EditProfile = () => {
   }
 
   const handleChange = (e) => {
-  const { name, value, type } = e.target;
-  const finalValue = type === 'number' ? (value === '' ? '' : Number(value)) : value;
+    const { name, value, type } = e.target
+    const finalValue =
+      type === 'number' ? (value === '' ? '' : Number(value)) : value
 
- 
-  setFormData(prev => ({ ...prev, [name]: finalValue }));
+    setFormData((prev) => ({ ...prev, [name]: finalValue }))
 
-  if(error[name]){
- validateField(name, finalValue);
-  }
-  
- 
-};
-
-  const handleBlur = (e)=>{
-    const { name, value, type } = e.target;
-  const finalValue = type === 'number' ? (value === '' ? '' : Number(value)) : value;
-
+    if (error[name]) {
       validateField(name, finalValue)
-
+    }
   }
-  
-  const isSchemaValid = EditProfileSchema.isValidSync(formData);
+
+  const handleBlur = (e) => {
+    const { name, value, type } = e.target
+    const finalValue =
+      type === 'number' ? (value === '' ? '' : Number(value)) : value
+
+    validateField(name, finalValue)
+  }
+
+  const isSchemaValid = EditProfileSchema.isValidSync(formData)
 
   const handleUpdateUser = async (e) => {
     e.preventDefault()
@@ -74,7 +72,7 @@ const EditProfile = () => {
       console.log(`response.data`, response.data)
       setUserData(formData)
       toast.success(response.data.message)
-      navigate('/dashboard',{replace:true})
+      navigate('/dashboard', { replace: true })
     } catch (error) {
       toast.error(error.response.data.message)
     } finally {
@@ -86,12 +84,12 @@ const EditProfile = () => {
     fetchUser()
   }, [])
 
-  const handleBack =()=>{
-    navigate('/dashboard',{replace:true})
+  const handleBack = () => {
+    navigate('/dashboard', { replace: true })
   }
 
   const isInvalid =
-  !isSchemaValid ||
+    !isSchemaValid ||
     !formData.username ||
     !formData.age ||
     !formData.gender ||
@@ -108,7 +106,7 @@ const EditProfile = () => {
             <input
               type="text"
               id="username"
-              name='username'
+              name="username"
               required
               value={formData.username}
               onChange={handleChange}
@@ -172,17 +170,21 @@ const EditProfile = () => {
             <small className="errors">{error.gender}</small>
           </div>
           <div className="btn">
-            <button type="submit" className={isInvalid ? 'disable-btn':'normal-btn'} disabled={isInvalid}>
+            <button
+              type="submit"
+              className={isInvalid ? 'disable-btn' : 'normal-btn'}
+              disabled={isInvalid}
+            >
               Save
             </button>
-            <button className='normal-btn back-btn'  onClick={handleBack}>
-              Back
-            </button>
+            <button type='button' className="normal-btn back-btn" onClick={handleBack}>
+          Back
+        </button>
           </div>
-           
         </form>
+        
         <div>
-            <ChangePassword/>
+          <ChangePassword />
         </div>
       </div>
     </div>

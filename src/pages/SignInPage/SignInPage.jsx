@@ -130,7 +130,7 @@ const SignInPage = () => {
             </Link>
           </div>
           <div>Create Account?{' '}
-            <Link className='signup-page-link' to="/">SignUp</Link>
+            <Link className='signup-page-link' to="/">Sign up</Link>
           </div>
           </div>
         </form>

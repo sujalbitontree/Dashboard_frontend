@@ -3,6 +3,7 @@ import * as Yup from 'yup'
 export const EditProfileSchema = Yup.object().shape({
   username: Yup.string()
     .min(3, 'Username must be at least 3 characters')
+    .max(20, 'Username must be at most 20 characters')
     .matches(/^[a-zA-Z]+$/, 'Username can only contain letters')
     .required('Username is required'),
 

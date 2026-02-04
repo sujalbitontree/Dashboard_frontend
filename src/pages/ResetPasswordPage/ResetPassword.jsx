@@ -54,7 +54,7 @@ validateField(id, value)
     setLoading(true)
 
     try {
-      await api.post(`/api/v1/auth/reset-password/${token}`, { password: formData.password })
+      await api.post(`/api/v1/auth/reset-password/${token}`, { password: formData.password , confirmPassword:formData.confirmPassword })
       toast.success('Password updated successfully!')
       navigate('/signin')
     } catch (err) {

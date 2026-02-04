@@ -9,6 +9,8 @@ const ChangePassword = () => {
   const [error, setError] = useState({})
   const [togglePassword, setTogglePassword] = useState(false)
 
+    const isSchemaValid = changePasswordSchema.isValidSync(formData);
+
   const validateField = async (name, value) => {
     try {
       const dataToValidate = { ...formData, [name]: value }
@@ -33,7 +35,6 @@ const ChangePassword = () => {
      validateField(name, value)
   }
 
-  const isSchemaValid = changePasswordSchema.isValidSync(formData);
 
   const handleSubmit = async (e) => {
     e.preventDefault()

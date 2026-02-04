@@ -20,15 +20,15 @@ const DashboardPage = () => {
     fetchUser()
   }, [])
 
-  const handleLogout = async() => {
-  try {
-    await api.post('/api/v1/auth/logout', {}, { withCredentials: true });
-  } catch (error) {
-    console.error("Logout failed", error);
-  } finally {
-    localStorage.removeItem('accessToken');
-    window.location.href = '/signin';
-  }
+  const handleLogout = async () => {
+    try {
+      await api.post('/api/v1/auth/logout', {}, { withCredentials: true })
+    } catch (error) {
+      console.error('Logout failed', error)
+    } finally {
+      localStorage.removeItem('accessToken')
+      navigate('/signin')
+    }
   }
 
   return (

@@ -3,7 +3,7 @@ import api from '../../axiosApi/api'
 import { toast } from 'react-toastify'
 import { signupSchema } from '../../validations/signupValidation.js'
 import './ForgotPassword.css'
-
+import { Link } from 'react-router-dom'
 const ForgotPassword = () => {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('') 
@@ -19,6 +19,7 @@ const ForgotPassword = () => {
     } catch (err) {
       setError(err.message) 
     }
+    
     
   }
 
@@ -44,7 +45,8 @@ const ForgotPassword = () => {
       toast.error(err.response.data.message )
     } finally {
       setLoading(false)
-     
+      setEmail('')
+      setError('')
      
     }
   }
@@ -81,6 +83,7 @@ const ForgotPassword = () => {
             </button>
           </div>
         </form>
+        <div className='back-btn'><Link className='back-btn-link' to='/signin'>Back to Sign in</Link></div>
       </div>
     </div>
   )

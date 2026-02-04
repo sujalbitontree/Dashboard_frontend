@@ -3,6 +3,7 @@ import * as Yup from 'yup'
 export const signupSchema = Yup.object().shape({
   username: Yup.string()
     .min(3, 'Username must be at least 3 characters')
+    .max(20, 'Username must be at most 20 characters')
     .matches(/^[a-zA-Z]+$/, 'Username can only contain letters')
     .required('Username is required'),
 
@@ -36,6 +37,6 @@ export const signupSchema = Yup.object().shape({
     .required('Age is required'),
 
   gender: Yup.string()
-  .oneOf(['male', 'female', 'other'], 'Please select a valid gender')
+  // .oneOf(['male', 'female', 'other'], 'Please select a valid gender')
   .required('Please select a gender'),
 })
